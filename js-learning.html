@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RPS game</title>
+        <style>
+            button {
+                border: none;
+                background-color: rgb(37, 11, 78);
+                padding: 20px 30px 20px 30px;
+                border-radius: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+                color: white;
+                margin-left: 20px;
+                margin-right: 20px;
+                text-align: center;
+                transition: opacity 0.15s, background-color 0.15s, box-shadow 0.15s;
+            }
+
+            button:hover {
+                opacity: 0.3;
+                box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+                background-color: #911cc0;
+            }
+            body {
+                background-color: rgb(64, 6, 131);
+            }
+            .button-rps {
+                display: flex;
+                margin-bottom: 60px;
+                margin-top: 100px;
+                
+            }
+            h1 {
+                font-family: 'Segoe UI', sans-serif;
+                font-size: 42px;
+                font-weight: 700;
+                text-align: center;
+                margin-top: 30px;
+
+                background: linear-gradient(100deg, #e148ff, #ffffff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                text-shadow: 0 0 15px rgba(129, 4, 129, 0.726);
+                box-shadow: 0 0 10px rgba(231, 190, 255, 0.651);
+                margin-bottom: 30px;
+                padding: 10px;
+                background-color: rgb(47, 4, 87);
+            }
+
+            .emo-up,
+            .emo-2,
+            .emo-clo {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 100px;
+                box-shadow: 0 0 10px 5px rgba(231, 190, 255, 0.651);
+            }
+            .buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+            }
+            .but-img {
+                margin-right: 40px;
+                padding: 20px;
+                border-radius: 10px;
+                transition: margin-bottom 0.40s, box-shadow 0.20s;
+
+            }
+            .but-img:hover {
+                margin-bottom: 30px;
+                box-shadow: 0 0 10px rgba(231, 190, 255, 0.651);
+            }
+            .main {
+                background-color: rgb(47, 4, 87);
+                display: flex;
+                justify-content: center;
+                box-shadow: 0 0 10px 5px rgba(231, 190, 255, 0.3);
+            }
+            .emo-img {
+                border-radius: 100px;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Rock Paper Scissor Game</h1>
+        <div class="main">
+        <div class="button-rps">
+        <div class="but-img">
+            <div class="emo-img">
+                <img class="emo-clo" src="rsp game/👊 Oncoming Fist Emoji.jpeg" alt="hand">
+            </div>
+            <div class="buttons">
+               <button onclick="
+            const randomNumber = Math.random();
+            let countedNumber = '';
+
+            if (randomNumber >=0 && randomNumber <1/3) {
+                countedNumber = 'rock';
+            } else if (randomNumber >= 1/3 && randomNumber <2/3) {
+                countedNumber='paper';
+            } else if (randomNumber >=2/3 &&  randomNumber <=1) {
+                countedNumber='scissor';
+            }
+
+            console.log (countedNumber);
+
+            let result = '';
+
+            if (countedNumber == 'rock') {
+                result = 'Tie';
+            } else if (countedNumber =='paper') {
+                result = 'you lose';
+            } else if (countedNumber =='scissor') {
+                result = 'you win';
+            }
+            
+            alert(`You picked rock, compurt picked ${countedNumber}, ${result}`);
+                ">Rock</button>
+            </div>
+            
+        </div>
+        
+        <div class="but-img">
+            <div class="emo-img">
+                <img class="emo-up" src="rsp game/✋ Raised Hand Emoji.jpeg" alt="hand">
+            </div>
+            <div class="buttons">
+               <button onclick="
+        
+        const randomNumber1=Math.random();
+        let countedNumber1='';
+
+            if (randomNumber1>=0 && randomNumber1<1/3) {
+                countedNumber1='rock';
+            } else if (randomNumber1>=1/3 && randomNumber1<2/3) {
+                countedNumber1='paper';
+            } else if (randomNumber1>=2/3 && randomNumber1<=1) {
+                countedNumber1='scissor';
+            }
+            console.log (countedNumber1)
+            let result1='';
+
+            if (countedNumber1 == 'rock') {
+                result1='you win';
+            } else if (countedNumber1 == 'paper') {
+                result1='Tie';
+            } else if (countedNumber1 == 'scissor') {
+                result1='you lose';
+            }
+
+            alert(`You picked paper, computer picked ${countedNumber1},${result1}`);
+
+        ">Paper</button>
+            </div>
+        
+        </div>
+        <div class="but-img">
+            <div class="emo-img">
+                <img class="emo-2" src="rsp game/✌️ Victory Hand Emoji.jpeg" alt="hand">
+            </div>
+        <div class="buttons">
+            <button onclick="
+                
+        const randomNumber2=Math.random();
+        let countedNumber2='';
+
+            if (randomNumber2>=0 && randomNumber2<1/3) {
+                countedNumber2='rock';
+            } else if (randomNumber2>=1/3 && randomNumber2<2/3) {
+                countedNumber2='paper';
+            } else if (randomNumber2>=2/3 && randomNumber2<=1) {
+                countedNumber2='scissor';
+            }
+            console.log (countedNumber2)
+            let result2='';
+
+            if (countedNumber2 == 'rock') {
+                result2='you lose';
+            } else if (countedNumber2== 'paper') {
+                result2='you win';
+            } else if (countedNumber2 == 'scissor') {
+                result2='Tie';
+            }
+
+            alert(`You picked scissor, computer picked ${countedNumber2},${result2}`);
+        ">Scissor</button>
+        </div>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>
